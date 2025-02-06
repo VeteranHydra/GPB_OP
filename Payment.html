@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../GPB-1.0/style.css" />
+		<title>Форма оплаты</title>
+	</head>
+	<body>
+		<header>
+			<a href="https://www.gazprombank.ru">
+				<img
+					class="logo"
+					src="../GPB-1.0/images/GPB_logo.png"
+					alt="Газпромбанк"
+			/></a>
+		</header>
+		<div class="Payment">
+			<div class="FormContainer">
+				<div class="PaymentText">
+					<h3 id="OnlinePayment">Оплата онлайн</h3>
+				</div>
+				<div class="Sum">
+					<input
+						class="SumInput"
+						autocomplete="off"
+						type="number"
+						placeholder="Сумма"
+					/>
+				</div>
+				<div class="Err" id="sumErr"></div>
+				<div class="Mail">
+					<input
+						class="MailInput"
+						autocomplete="off"
+						type="text"
+						placeholder="Почта"
+					/>
+				</div>
+				<div class="Err" id="mailErr"></div>
+				<div class="Payment_account">
+					<input
+						class="PAInput"
+						autocomplete="off"
+						type="text"
+						placeholder="Расчетный счет"
+					/>
+				</div>
+				<div class="Err" id="paErr"></div>
+				<div class="CheckboxContainer">
+					<input type="checkbox" id="acceptTerms" class="CheckboxInput" />
+					<label for="acceptTerms"
+						>Я принимаю условия
+						<a
+							class="linkk"
+							href="https://www.gazprombank.ru/upload/docs/agreements/card-debit/consent_personal_data_debit_card_12_23.pdf"
+							target="_blank"
+							>использования</a
+						></label
+					>
+					<div class="Err" id="CheckedErr"></div>
+				</div>
+				<button class="BtnSubmit" onclick="validateForm()">Далее</button>
+			</div>
+		</div>
+		<script src="../GPB-1.0/script.js"></script>
+	</body>
+</html>
